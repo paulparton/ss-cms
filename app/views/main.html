@@ -4,10 +4,11 @@
 </div>
 <p>
 	<h3>Fake login buttons</h3>
-	<button ng-click="authenticate('on')">login</button>
-	<button ng-click="authenticate('off')">log out</button>
-	<span>User status:<strong>{{authenticated}}</strong></span>
+	<button ng-click="authenticate()">Toggle edit mode </button>
+
+	<span>Edit mode status:<strong>{{authenticated}}</strong></span>
 </p>
+
 <p>
 <span ss-content="div|text" model="title"></span>
 </p>

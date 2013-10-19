@@ -9,9 +9,12 @@ angular.module('ssCmsApp')
   		$scope.content.name = "Paul";
   		$scope.content.address = "Sutherland";
 
-  		$scope.authenticate = function(status){
+      //Variable holding fake user login status for testing
+      $scope.authenticated = false;
+
+  		$scope.authenticate = function(){
   			
-  			if (status === 'on'){
+  			if ($scope.authenticated === false){
 
   				$scope.authenticated=true;
   				$scope.$broadcast('ssTrigger','toggle');
@@ -22,7 +25,7 @@ angular.module('ssCmsApp')
   				$scope.$broadcast('ssTrigger','toggle');
 
   			}		
+
   		};
-  		//Variable holding fake user login status for testing
-  		$scope.authenticated = false;
+
   });
