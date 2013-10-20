@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ssCmsApp', [])
+angular.module('ssCmsApp', ['ssCms'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

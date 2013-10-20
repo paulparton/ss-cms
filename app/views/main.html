@@ -1,20 +1,21 @@
-<div class="hero-unit">
+
 <h1>SS CMS</h1>
 <h2>Ship yard</h2>
-</div>
+
 <p>
 	<h3>Fake login buttons</h3>
-	<button ng-click="authenticate()">Toggle edit mode </button>
+	
 
-	<span>Edit mode status:<strong>{{authenticated}}</strong></span>
+	<span>Edit mode status:<strong>{{status}}</strong></span>
 </p>
 
 <p>
-<span ss-content="div|text" model="title"></span>
+<span ss-content="div|text" model="title" name="Title"></span>
 </p>
 <p>
-<span ss-content="div|text" model="name"></span>
+<span ss-content="div|text" model="name" name="Name"></span>
 </p>
 <p>
-<span ss-content="div|text" model="address"></span>
+<span ss-content="div|text" model="address" name="Address"></span>
 </p>
+
