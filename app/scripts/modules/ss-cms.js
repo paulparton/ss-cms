@@ -1,14 +1,24 @@
+/**
+*   Super Simple CMS module (temporary name)
+*   A collection of angular objects and directives for building a modular CMS solution
+**/
 var ssCms = angular.module('ssCms', []);
 
+/**
+*   The ContentManager factory can control and monitor one or more ss-content directives
+*/
 ssCms.factory('ssContentManager', function () {
 
     var ContentManager = function (args) {
 
         //Remove the need to use the new keyword
         if (!(this instanceof ContentManager)) {
+
             return new ContentManager(args);
+
         }
 
+        //Add provided args to ContentManager object
         this.args = args;
 
         //Edit mode not active by default
@@ -16,8 +26,13 @@ ssCms.factory('ssContentManager', function () {
 
     };
 
+    /**
+    *   Change the edit mode status of one or more ss-content elements
+        @param {string} action The action to be performed by the targeted content items (toggle, enable, disable)
+    **/
     ContentManager.prototype.editMode = function (action) {
 
+        
         if (action === 'toggle') {
 
             if (this.isEdit === true) {
@@ -31,6 +46,14 @@ ssCms.factory('ssContentManager', function () {
                 this.args.scope.$broadcast('ssTrigger', 'show');
 
             }
+
+        } else if (action === 'enable'){
+
+            this.isEdit = true;
+
+        } else if (action === 'disable'){
+
+            this.isEdit = true;            
 
         }
 
